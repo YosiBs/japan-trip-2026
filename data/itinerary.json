@@ -31,7 +31,8 @@
           "label": "הצג ב-Google Maps",
           "url": "https://www.google.com/maps/search/?api=1&query=Osaka%2CJapan"
         }
-      ]
+      ],
+      "cityEnglish": "Osaka"
     },
     {
       "id": "universal-studios",
@@ -54,7 +55,8 @@
           "label": "האתר הרשמי",
           "url": "https://www.usj.co.jp/web/en/us"
         }
-      ]
+      ],
+      "cityEnglish": "Osaka"
     }
   ]
 }
