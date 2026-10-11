@@ -21,3 +21,15 @@
 .map .leaflet-popup-content{margin:12px 15px}
 .map-panel .map-header h3 span{color:var(--coral)}
 @media(max-width:700px){.map-city-name{font-size:10px}.map-city-label.featured .map-city-name{font-size:11px}}
+
+/* Expanded booking-safe itinerary details */
+.event-status.pending{background:#fff2dc;color:#a36c21}
+.event-details{border-top:1px solid var(--line);margin:12px 0 22px;padding-top:18px}
+.event-details h3{font-size:17px;margin:0 0 10px}
+.event-detail-row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #f0efec;padding:10px 0;font-size:13px;align-items:start}
+.event-detail-row span{color:#7b8690;flex:0 0 36%}
+.event-detail-row strong{font-size:13px;line-height:1.5;text-align:left;font-weight:700;flex:1}
+.event-warning{background:#fff6e8;border:1px solid #e8ca8b;border-radius:10px;padding:12px 14px;color:#765522;margin:12px 0}
+.event-warning strong{font-size:14px}
+.event-warning p{line-height:1.55;font-size:13px;margin:5px 0 0}
+.approximate-note{color:#788790;font-size:12px;line-height:1.6;margin:8px 0 17px}
