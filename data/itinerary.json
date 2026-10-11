@@ -8,55 +8,613 @@
       36.2,
       138.2
     ],
-    "defaultZoom": 5
+    "defaultZoom": 5,
+    "description": "תאריכים ושעות לפי ההזמנות ויומן Google. כל הזמנים המקומיים אלא אם צוין אחרת.",
+    "lastUpdated": "2026-10-11"
   },
   "events": [
     {
-      "id": "osaka-stay",
-      "title": "שהות באוסקה",
-      "city": "אוסקה",
-      "category": "city",
-      "status": "planned",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-15",
-      "time": null,
-      "location": "Osaka, Japan",
-      "description": "מתוכננת שהות באוסקה בין 12 ל־15 בנובמבר. פרטי המלון והתוכנית היומית עדיין לא הוזנו.",
+      "id": "flight-arrival",
+      "title": "טיסה לטוקיו · Arkia IZ881",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "transport",
+      "status": "confirmed",
+      "startDate": "2026-10-28",
+      "endDate": null,
+      "time": "00:15 (ישראל) → 19:30 (יפן)",
+      "location": "Tokyo, Japan",
+      "description": "טיסה ישירה מתל אביב לטוקיו. התייצבות בנתב״ג ב־27.10 בשעה 21:15, טרמינל 3. המראה ב־28.10 בשעה 00:15 שעון ישראל; נחיתה בטוקיו ב־19:30 שעון יפן.",
       "coordinates": {
-        "lat": 34.6937,
-        "lng": 135.5023
+        "lat": 35.6762,
+        "lng": 139.6503
       },
-      "links": [
+      "geoAccuracy": "approximate",
+      "details": [
         {
-          "label": "הצג ב-Google Maps",
-          "url": "https://www.google.com/maps/search/?api=1&query=Osaka%2CJapan"
+          "label": "חברת תעופה",
+          "value": "Arkia"
+        },
+        {
+          "label": "מספר טיסה",
+          "value": "IZ881"
+        },
+        {
+          "label": "התייצבות בנתב״ג",
+          "value": "27.10 · 21:15 · טרמינל 3"
+        },
+        {
+          "label": "המראה",
+          "value": "28.10 · 00:15 (ישראל)"
+        },
+        {
+          "label": "נחיתה בטוקיו",
+          "value": "28.10 · 19:30 (יפן)"
         }
       ],
-      "cityEnglish": "Osaka"
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Tokyo%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "hotel-tokyo-ebisu",
+      "title": "Tokyu Stay Shibuya Ebisu",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "hotel",
+      "status": "confirmed",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-02",
+      "time": "צ׳ק-אין 15:00–24:00",
+      "location": "1-9-5 Ebisu-Nishi, Shibuya-ku, Tokyo, Japan",
+      "description": "5 לילות בטוקיו, באזור Ebisu / Shibuya. חדר Superior Queen Non-Smoking לשני מבוגרים. צ׳ק-אאוט ב־2 בנובמבר עד 11:00.",
+      "coordinates": {
+        "lat": 35.6475,
+        "lng": 139.7109
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "לילות",
+          "value": "5"
+        },
+        {
+          "label": "צ׳ק-אין",
+          "value": "28.10 · 15:00–24:00"
+        },
+        {
+          "label": "צ׳ק-אאוט",
+          "value": "02.11 · עד 11:00"
+        },
+        {
+          "label": "חדר",
+          "value": "Superior Queen Non-Smoking"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=1-9-5%20Ebisu-Nishi%2C%20Shibuya-ku%2C%20Tokyo%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "tokyo-wagyu-dinner",
+      "title": "WAGYU YAKINIKU NIKUTARASHI",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "food",
+      "status": "confirmed",
+      "startDate": "2026-10-31",
+      "endDate": null,
+      "time": "20:00",
+      "location": "WAGYU YAKINIKU NIKUTARASHI, Shibuya, Tokyo 151-0053, Japan",
+      "description": "ארוחת ערב שהוזמנה ואושרה לשני סועדים ביום שבת, 31 באוקטובר, בשעה 20:00. סיום האירוע ביומן בשעה 21:30 הוא הערכה בלבד ולא משך ישיבה שאושר במסעדה.",
+      "coordinates": {
+        "lat": 35.6618,
+        "lng": 139.7041
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "תאריך",
+          "value": "שבת · 31.10"
+        },
+        {
+          "label": "שעה",
+          "value": "20:00 (שעון יפן)"
+        },
+        {
+          "label": "סועדים",
+          "value": "2"
+        },
+        {
+          "label": "סטטוס",
+          "value": "הזמנה אושרה"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=WAGYU%20YAKINIKU%20NIKUTARASHI%2C%20Shibuya%2C%20Tokyo%20151-0053%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "train-shinagawa-nagoya",
+      "title": "שינקנסן · Shinagawa → Nagoya",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "transport",
+      "status": "pending",
+      "startDate": "2026-11-02",
+      "endDate": null,
+      "time": "09:25–10:54",
+      "location": "Shinagawa Station, Tokyo, Japan",
+      "description": "רכבת Nozomi 343 משינאגאווה לנגויה, מושבים שמורים במחלקת Ordinary לשני מבוגרים. התשלום בוצע דרך Klook, אך מסמכי ההזמנה מציינים שהאישור הסופי וקוד העלייה עדיין בהמתנה.",
+      "coordinates": {
+        "lat": 35.6285,
+        "lng": 139.7388
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "רכבת",
+          "value": "Nozomi 343"
+        },
+        {
+          "label": "מוצא",
+          "value": "Shinagawa Station · 09:25"
+        },
+        {
+          "label": "יעד",
+          "value": "Nagoya Station · 10:54"
+        },
+        {
+          "label": "כרטיסים",
+          "value": "2 מבוגרים · Ordinary Reserved"
+        },
+        {
+          "label": "מצב הזמנה",
+          "value": "שולם · ממתין לאישור סופי וקוד QR"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Shinagawa%20Station%2C%20Tokyo%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "nagoya-car-pickup",
+      "title": "איסוף רכב · Nippon Rent A Car",
+      "city": "נגויה",
+      "cityEnglish": "Nagoya",
+      "category": "transport",
+      "status": "confirmed",
+      "startDate": "2026-11-02",
+      "endDate": null,
+      "time": "12:00",
+      "location": "3-22-8 Meieki, Nakamura-ku, Nagoya, Aichi, Japan",
+      "description": "איסוף הרכב בנגויה לשהות באזור גיפו. רכב מסוג Toyota Raize או דומה, SUV אוטומטי. יש להצטייד ברישיון נהיגה, במסמכים הדרושים ובוואוצ׳ר מודפס מההזמנה.",
+      "coordinates": {
+        "lat": 35.1711,
+        "lng": 136.8815
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "ספק",
+          "value": "Nippon Rent A Car / Klook"
+        },
+        {
+          "label": "איסוף",
+          "value": "02.11 · 12:00"
+        },
+        {
+          "label": "החזרה",
+          "value": "07.11 · 12:00 · אותו סניף"
+        },
+        {
+          "label": "סוג רכב",
+          "value": "Toyota Raize או דומה · אוטומטי"
+        },
+        {
+          "label": "שעות הסניף",
+          "value": "08:00–20:00"
+        },
+        {
+          "label": "לפני האיסוף",
+          "value": "להדפיס את ואוצ׳ר ההזמנה ולוודא מסמכי נהיגה תקפים"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=3-22-8%20Meieki%2C%20Nakamura-ku%2C%20Nagoya%2C%20Aichi%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "hotel-gifu-gujo",
+      "title": "Fairfield by Marriott Gifu Gujo",
+      "city": "גוג׳ו",
+      "cityEnglish": "Gujo",
+      "category": "hotel",
+      "status": "confirmed",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-07",
+      "time": "צ׳ק-אין מ־15:00",
+      "location": "Yamato-cho Tsurugi 200-1, Gujo, Gifu 501-4612, Japan",
+      "description": "5 לילות באזור Gujo שבמחוז Gifu. חדר Standard King לשני מבוגרים; חניה פרטית ללא תשלום, ארוחות אינן כלולות.",
+      "coordinates": {
+        "lat": 35.809,
+        "lng": 136.906
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "לילות",
+          "value": "5"
+        },
+        {
+          "label": "צ׳ק-אין",
+          "value": "02.11 · מ־15:00"
+        },
+        {
+          "label": "צ׳ק-אאוט",
+          "value": "07.11 · עד 11:00"
+        },
+        {
+          "label": "חדר",
+          "value": "Standard King"
+        },
+        {
+          "label": "חניה",
+          "value": "חניה פרטית חינם"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Yamato-cho%20Tsurugi%20200-1%2C%20Gujo%2C%20Gifu%20501-4612%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "nagoya-car-return",
+      "title": "החזרת רכב · Nagoya",
+      "city": "נגויה",
+      "cityEnglish": "Nagoya",
+      "category": "transport",
+      "status": "confirmed",
+      "startDate": "2026-11-07",
+      "endDate": null,
+      "time": "12:00",
+      "location": "3-22-8 Meieki, Nakamura-ku, Nagoya, Aichi, Japan",
+      "description": "החזרת הרכב השכור לסניף Nippon Rent A Car בנגויה בצהריים, לאחר היציאה מהמלון באזור גיפו.",
+      "coordinates": {
+        "lat": 35.1711,
+        "lng": 136.8815
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "ספק",
+          "value": "Nippon Rent A Car"
+        },
+        {
+          "label": "תאריך",
+          "value": "07.11"
+        },
+        {
+          "label": "שעת החזרה",
+          "value": "12:00"
+        },
+        {
+          "label": "מיקום",
+          "value": "אותו סניף שבו נאסף הרכב"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=3-22-8%20Meieki%2C%20Nakamura-ku%2C%20Nagoya%2C%20Aichi%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "hotel-kyoto-sanjo",
+      "title": "Mitsui Garden Hotel Kyoto Sanjo PREMIER",
+      "city": "קיוטו",
+      "cityEnglish": "Kyoto",
+      "category": "hotel",
+      "status": "confirmed",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-12",
+      "time": "צ׳ק-אין מ־15:00",
+      "location": "45-1 Hishiya-cho, Higashiiru, Higashinotoin, Sanjo-dori, Nakagyo-ku, Kyoto, Japan",
+      "description": "5 לילות בקיוטו. חדר Superior Queen עם מכונת כביסה, לשני מבוגרים. צ׳ק-אאוט עד 12:00 ב־12 בנובמבר.",
+      "coordinates": {
+        "lat": 35.0095,
+        "lng": 135.7611
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "לילות",
+          "value": "5"
+        },
+        {
+          "label": "צ׳ק-אין",
+          "value": "07.11 · מ־15:00"
+        },
+        {
+          "label": "צ׳ק-אאוט",
+          "value": "12.11 · עד 12:00"
+        },
+        {
+          "label": "חדר",
+          "value": "Superior Queen with Washing Machine"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=45-1%20Hishiya-cho%2C%20Higashiiru%2C%20Higashinotoin%2C%20Sanjo-dori%2C%20Nakagyo-ku%2C%20Kyoto%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "hotel-osaka-namba",
+      "title": "Citadines Namba Osaka",
+      "city": "אוסקה",
+      "cityEnglish": "Osaka",
+      "category": "hotel",
+      "status": "confirmed",
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-15",
+      "time": "צ׳ק-אין מ־15:00",
+      "location": "3-5-25 Nippombashi, Naniwa-ku, Osaka 556-0005, Japan",
+      "description": "3 לילות באוסקה במלון Citadines Namba Osaka. חדר Executive Double לשני מבוגרים. צ׳ק-אאוט ב־15 בנובמבר עד 11:00.",
+      "coordinates": {
+        "lat": 34.6634,
+        "lng": 135.5061
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "לילות",
+          "value": "3"
+        },
+        {
+          "label": "צ׳ק-אין",
+          "value": "12.11 · מ־15:00"
+        },
+        {
+          "label": "צ׳ק-אאוט",
+          "value": "15.11 · עד 11:00"
+        },
+        {
+          "label": "חדר",
+          "value": "Executive Double"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=3-5-25%20Nippombashi%2C%20Naniwa-ku%2C%20Osaka%20556-0005%2C%20Japan"
+        }
+      ]
     },
     {
       "id": "universal-studios",
-      "title": "Universal Studios Japan",
+      "title": "Universal Studios Japan · Studio + Express Pass",
       "city": "אוסקה",
+      "cityEnglish": "Osaka",
       "category": "attraction",
-      "status": "idea",
-      "startDate": null,
+      "status": "confirmed",
+      "startDate": "2026-11-12",
       "endDate": null,
-      "dateNote": "במהלך השהות באוסקה · התאריך טרם נקבע",
-      "time": null,
-      "location": "Universal Studios Japan, Osaka",
-      "description": "רוצים לבקר בפארק במהלך השהות באוסקה. עדיין לא נקבע יום ולא אומתה הזמנת כרטיסים.",
+      "time": "16:40–17:40 · SUPER NINTENDO WORLD",
+      "location": "2 Chome-1-33 Sakurajima, Konohana Ward, Osaka 554-0031, Japan",
+      "description": "כרטיסי כניסה ליום אחד ל־2 מבוגרים הוזמנו ליום חמישי, 12 בנובמבר, יחד עם Express Pass 4 – Minecart & JAWS. חלון הכניסה ל־SUPER NINTENDO WORLD הוא 16:40–17:40. יש כרטיסי כניסה נפרדים ל־Studio Pass ול־Express Pass.",
       "coordinates": {
         "lat": 34.6654,
         "lng": 135.4323
       },
-      "links": [
+      "geoAccuracy": "precise",
+      "details": [
         {
-          "label": "האתר הרשמי",
-          "url": "https://www.usj.co.jp/web/en/us"
+          "label": "תאריך",
+          "value": "חמישי · 12.11.2026"
+        },
+        {
+          "label": "כניסה לפארק",
+          "value": "1-Day Studio Pass · שני מבוגרים"
+        },
+        {
+          "label": "אקספרס",
+          "value": "Express Pass 4 – Minecart & JAWS · לשני אנשים"
+        },
+        {
+          "label": "SUPER NINTENDO WORLD",
+          "value": "16:40–17:40"
+        },
+        {
+          "label": "Mario Kart: Koopa’s Challenge",
+          "value": "16:40–17:10"
+        },
+        {
+          "label": "Mine Cart Madness",
+          "value": "17:10–17:40"
+        },
+        {
+          "label": "אטרקציה נוספת 1",
+          "value": "Harry Potter and the Forbidden Journey או The Flying Dinosaur"
+        },
+        {
+          "label": "אטרקציה נוספת 2",
+          "value": "JAWS או Jurassic Park – The Ride"
+        },
+        {
+          "label": "חשוב",
+          "value": "להביא QR מתאים לכל סוג כרטיס; לפי מסמך ההזמנה נדרש להדפיס את כרטיסי הכניסה. לא ניתן לצאת ולהיכנס שוב לפארק."
         }
       ],
-      "cityEnglish": "Osaka"
+      "links": [
+        {
+          "label": "אתר Universal Studios Japan",
+          "url": "https://www.usj.co.jp/web/en/us"
+        },
+        {
+          "label": "מיקום ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Universal%20Studios%20Japan%2C%20Osaka"
+        }
+      ]
+    },
+    {
+      "id": "train-osaka-tokyo",
+      "title": "שינקנסן · Shin-Osaka → Tokyo",
+      "city": "אוסקה",
+      "cityEnglish": "Osaka",
+      "category": "transport",
+      "status": "pending",
+      "startDate": "2026-11-15",
+      "endDate": null,
+      "time": "13:15–15:45",
+      "location": "Shin-Osaka Station, Osaka, Japan",
+      "description": "רכבת Nozomi 254 מאוסקה לטוקיו, מושבים שמורים במחלקת Ordinary לשני מבוגרים. התשלום בוצע דרך Klook, והכרטיסים עדיין בהליך אישור. יש אי־התאמה בתאריך בין גוף מסמך ההזמנה לבין היומן.",
+      "coordinates": {
+        "lat": 34.7334,
+        "lng": 135.5003
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "רכבת",
+          "value": "Nozomi 254"
+        },
+        {
+          "label": "מוצא",
+          "value": "Shin-Osaka Station · 13:15"
+        },
+        {
+          "label": "יעד",
+          "value": "Tokyo Station · 15:45"
+        },
+        {
+          "label": "כרטיסים",
+          "value": "2 מבוגרים · Ordinary Reserved"
+        },
+        {
+          "label": "מצב הזמנה",
+          "value": "שולם · ממתין לאישור סופי וקוד QR"
+        }
+      ],
+      "warning": "דרוש אימות: בגוף מסמך ההזמנה כתוב 14.11.2026, אבל בשם המסמך וב־Google Calendar כתוב 15.11.2026. יש לוודא את התאריך בכרטיס שהונפק.",
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Shin-Osaka%20Station%2C%20Osaka%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "hotel-tokyo-shinjuku",
+      "title": "Keio Plaza Hotel Tokyo-Shinjuku",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "hotel",
+      "status": "confirmed",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-18",
+      "time": "צ׳ק-אין מ־15:00",
+      "location": "2-2-1 Nishi-Shinjuku, Shinjuku-ku, Tokyo 160-8330, Japan",
+      "description": "3 לילות אחרונים בטוקיו באזור Shinjuku. חדר Plaza Luxe Double ללא עישון. ב־18 בנובמבר התייצבות לטיסה חזרה בשעה 19:15.",
+      "coordinates": {
+        "lat": 35.69,
+        "lng": 139.694
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "לילות",
+          "value": "3"
+        },
+        {
+          "label": "צ׳ק-אין",
+          "value": "15.11 · 15:00"
+        },
+        {
+          "label": "צ׳ק-אאוט",
+          "value": "18.11 · שעה לא צוינה במסמך"
+        },
+        {
+          "label": "חדר",
+          "value": "Plaza Luxe Double · Non-Smoking"
+        },
+        {
+          "label": "ארוחות",
+          "value": "לא כלולות"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=2-2-1%20Nishi-Shinjuku%2C%20Shinjuku-ku%2C%20Tokyo%20160-8330%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "id": "flight-return",
+      "title": "טיסה חזרה · Arkia IZ882",
+      "city": "טוקיו",
+      "cityEnglish": "Tokyo",
+      "category": "transport",
+      "status": "confirmed",
+      "startDate": "2026-11-18",
+      "endDate": null,
+      "time": "22:15 (יפן) → 05:45 (ישראל, למחרת)",
+      "location": "Tokyo, Japan",
+      "description": "טיסה ישירה מטוקיו לתל אביב. התייצבות בשדה התעופה בטוקיו ב־18.11 בשעה 19:15; המראה ב־22:15 שעון יפן ונחיתה בנתב״ג ב־19 בנובמבר בשעה 05:45 שעון ישראל.",
+      "coordinates": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "geoAccuracy": "approximate",
+      "details": [
+        {
+          "label": "חברת תעופה",
+          "value": "Arkia"
+        },
+        {
+          "label": "מספר טיסה",
+          "value": "IZ882"
+        },
+        {
+          "label": "התייצבות בטוקיו",
+          "value": "18.11 · 19:15"
+        },
+        {
+          "label": "המראה",
+          "value": "18.11 · 22:15 (יפן)"
+        },
+        {
+          "label": "נחיתה בישראל",
+          "value": "19.11 · 05:45 (ישראל)"
+        }
+      ],
+      "links": [
+        {
+          "label": "פתיחה ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Tokyo%2C%20Japan"
+        }
+      ]
     }
   ]
 }
