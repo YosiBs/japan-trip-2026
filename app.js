@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const types={all:['הכל','✦'],city:['ערים ואזורים','⌖'],attraction:['אטרקציות','🎡'],food:['מסעדות','🍜'],hotel:['לינה','🏨'],transport:['תחבורה','🚆']};
-  const statuses={confirmed:'הוזמן / אושר',planned:'מתוכנן',idea:'רעיון לביקור'};
+  const statuses={confirmed:'הוזמן / אושר',planned:'מתוכנן',idea:'רעיון לביקור',pending:'שולם · ממתין לאישור'};
   const $=s=>document.querySelector(s);
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const d=s=>new Date(s+'T12:00:00');
@@ -95,7 +95,42 @@
     else if(bounds.length===1){map.setView(bounds[0],7.3,{animate:false})}
     else{map.fitBounds(bounds,{padding:[65,70],maxZoom:7.3,animate:false})}
   }
-  function show(e){if(!e)return;const facts=[['תאריך',dateText(e)],['שעה',e.time||'טרם נקבעה'],['עיר',e.city||'לא צוינה'],['מיקום',e.location||'טרם נוסף']];const links=[...(e.links||[])];const google=e.coordinates?'https://www.google.com/maps/search/?api=1&query='+e.coordinates.lat+'%2C'+e.coordinates.lng:e.location?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.location):null;if(google&&!links.some(l=>l.url?.includes('google.com/maps')))links.unshift({label:'ניווט ב-Google Maps',url:google});$('#dialog-content').innerHTML='<div class="dialog-icon">'+(types[e.category]?.[1]||'📍')+'</div><span class="dialog-kicker">JAPAN 2026 · TRIP DETAIL</span><h2 class="dialog-title" id="dialog-title">'+esc(e.title)+'</h2><div class="dialog-tags"><span class="dialog-tag">'+esc(types[e.category]?.[0]||'מקום')+'</span><span class="dialog-tag">'+esc(statuses[e.status]||'מתוכנן')+'</span></div><p class="dialog-description">'+esc(e.description||'עדיין לא הוספנו תיאור.')+'</p><div class="dialog-facts">'+facts.map(([k,v])=>'<div class="dialog-fact"><small>'+k+'</small><strong>'+esc(v)+'</strong></div>').join('')+'</div><div class="dialog-links">'+links.map((l,i)=>{const url=safeUrl(l.url);return url?'<a class="dialog-link '+(i?'secondary':'')+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(l.label||'פתיחת קישור')+' ↗</a>':''}).join('')+'</div>';if(!el.dialog.open)el.dialog.showModal()}
+  function show(e){
+    if(!e)return;
+    const facts=[['תאריך',dateText(e)],['שעה',e.time||'טרם נקבעה'],['עיר',e.city||'לא צוינה'],['מיקום',e.location||'טרם נוסף']];
+    const links=[...(e.links||[])];
+    // The map pins are approximate for most places. Always navigate using the
+    // full address first; never substitute an approximate latitude/longitude.
+    const google=e.location
+      ?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.location)
+      :e.coordinates
+        ?'https://www.google.com/maps/search/?api=1&query='+e.coordinates.lat+'%2C'+e.coordinates.lng
+        :null;
+    if(google&&!links.some(l=>l.url?.includes('google.com/maps')))links.unshift({label:'ניווט ב-Google Maps',url:google});
+    const details=Array.isArray(e.details)?e.details:[];
+    const detailRows=details.length?'<section class="event-details"><h3>מידע נוסף</h3>'+details.map(item=>
+      '<div class="event-detail-row"><span>'+esc(item.label||'פרט')+'</span><strong>'+esc(item.value||'—')+'</strong></div>'
+    ).join('')+'</section>':'';
+    const warning=e.warning?'<div class="event-warning" role="note"><strong>⚠ חשוב לבדוק לפני הנסיעה</strong><p>'+esc(e.warning)+'</p></div>':'';
+    const approximate=e.geoAccuracy==='approximate'?'<p class="approximate-note">⌖ הסמן במפה מציג מיקום משוער. לניווט השתמשו בכתובת המלאה.</p>':'';
+    $('#dialog-content').innerHTML=
+      '<div class="dialog-icon">'+(types[e.category]?.[1]||'📍')+'</div>'+
+      '<span class="dialog-kicker">JAPAN 2026 · TRIP DETAIL</span>'+
+      '<h2 class="dialog-title" id="dialog-title">'+esc(e.title)+'</h2>'+
+      '<div class="dialog-tags"><span class="dialog-tag">'+esc(types[e.category]?.[0]||'מקום')+'</span>'+
+      '<span class="dialog-tag">'+esc(statuses[e.status]||'מתוכנן')+'</span></div>'+
+      '<p class="dialog-description">'+esc(e.description||'עדיין לא הוספנו תיאור.')+'</p>'+
+      warning+
+      '<div class="dialog-facts">'+facts.map(([k,v])=>
+        '<div class="dialog-fact"><small>'+esc(k)+'</small><strong>'+esc(v)+'</strong></div>'
+      ).join('')+'</div>'+
+      detailRows+approximate+
+      '<div class="dialog-links">'+links.map((l,i)=>{
+        const url=safeUrl(l.url);
+        return url?'<a class="dialog-link '+(i?'secondary':'')+'" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(l.label||'פתיחת קישור')+' ↗</a>':'';
+      }).join('')+'</div>';
+    if(!el.dialog.open)el.dialog.showModal();
+  }
   function render(){const rows=events.filter(e=>match(e));chips();dateButtons();timeline(rows);drawMap(rows)}
   function clear(){f.category='all';f.city='all';f.query='';f.day=null;el.city.value='all';el.search.value='';render()}
   function mobile(view){el.grid.dataset.mobileView=view;['timeline','map'].forEach(k=>{const b=$('#mobile-'+k);b.classList.toggle('active',k===view);b.setAttribute('aria-pressed',String(k===view))});if(view==='map'&&map)setTimeout(()=>map.invalidateSize(),80);if(innerWidth<=700)el.grid.scrollIntoView({behavior:'smooth',block:'start'})}
