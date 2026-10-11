@@ -1,0 +1,60 @@
+{
+  "trip": {
+    "title": "המסע שלנו ליפן",
+    "subtitle": "יוסי ויעלה · Japan 2026",
+    "startDate": "2026-10-28",
+    "endDate": "2026-11-18",
+    "defaultCenter": [
+      36.2,
+      138.2
+    ],
+    "defaultZoom": 5
+  },
+  "events": [
+    {
+      "id": "osaka-stay",
+      "title": "שהות באוסקה",
+      "city": "אוסקה",
+      "category": "city",
+      "status": "planned",
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-15",
+      "time": null,
+      "location": "Osaka, Japan",
+      "description": "מתוכננת שהות באוסקה בין 12 ל־15 בנובמבר. פרטי המלון והתוכנית היומית עדיין לא הוזנו.",
+      "coordinates": {
+        "lat": 34.6937,
+        "lng": 135.5023
+      },
+      "links": [
+        {
+          "label": "הצג ב-Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Osaka%2CJapan"
+        }
+      ]
+    },
+    {
+      "id": "universal-studios",
+      "title": "Universal Studios Japan",
+      "city": "אוסקה",
+      "category": "attraction",
+      "status": "idea",
+      "startDate": null,
+      "endDate": null,
+      "dateNote": "במהלך השהות באוסקה · התאריך טרם נקבע",
+      "time": null,
+      "location": "Universal Studios Japan, Osaka",
+      "description": "רוצים לבקר בפארק במהלך השהות באוסקה. עדיין לא נקבע יום ולא אומתה הזמנת כרטיסים.",
+      "coordinates": {
+        "lat": 34.6654,
+        "lng": 135.4323
+      },
+      "links": [
+        {
+          "label": "האתר הרשמי",
+          "url": "https://www.usj.co.jp/web/en/us"
+        }
+      ]
+    }
+  ]
+}
